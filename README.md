@@ -40,7 +40,7 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 
 ## 📂 Project Structure
 ```
-drag-drop-builder/
+drag-drop/
 ├── src/
 │ ├── components/
 │ │ ├── ui/
