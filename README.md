@@ -3,7 +3,6 @@
 A prototype implementation of **Websites.co.in's drag-and-drop website builder**, transforming the existing **form-based builder** into an intuitive **drag-and-drop interface**.  
 Users can drag elements (Text, Image, Button) into a predefined **template structure** (Header, Body, Footer) and customize their properties via a **form-based properties panel**, combining flexibility with the original form-driven workflow.
 
----
 
 ## 🚀 Features
 
@@ -27,7 +26,6 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
   - **Tailwind CSS** for utility-first responsive design.  
   - **shadcn/ui** components (`Button`, `Card`, `Input`, `Label`, `Select`) for modern accessibility.  
 
----
 
 ## 🛠️ Tech Stack
 
@@ -39,7 +37,6 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 - **shadcn/ui** – Accessible UI components  
 - **tailwind-merge** – Utility to prevent conflicting Tailwind classes  
 
----
 
 ## 📂 Project Structure
 
@@ -73,7 +70,6 @@ drag-drop-builder/
 
 
 
----
 
 ## ⚙️ Setup Instructions
 
@@ -119,7 +115,6 @@ drag-drop-builder/
   * **Mobile**: Layout stacks vertically.
   * **Desktop**: Layout is horizontal for efficient editing.
 
----
 
 ## 🌱 Future Enhancements
 
@@ -130,7 +125,6 @@ drag-drop-builder/
 * Form validation (e.g., valid image URLs)
 * Support for **new element types** (Video, Forms, Galleries, etc.)
 
----
 
 ## ⚠️ Known Limitations
 
@@ -139,7 +133,6 @@ drag-drop-builder/
 * Undo/redo **does not persist across sessions**
 * Mobile usability could be enhanced with **collapsible panels** and **touch-friendly drag**
 
----
 
 ## 🚢 Deployment
 
@@ -155,7 +148,6 @@ drag-drop-builder/
    [vercel](https://drag-drop-dun-zeta.vercel.app/)
    ```
 
----
 
 ## 📝 Notes
 
