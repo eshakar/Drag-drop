@@ -74,9 +74,10 @@ drag-drop-builder/
 
 1. **Clone the repository**
    
+   ```bash
    git clone [<repository-url>](https://github.com/eshakar/Drag-drop.git)
    cd drag-drop-builder
-
+    ```
 
 3. **Install dependencies**
 
