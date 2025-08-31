@@ -39,7 +39,7 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 
 
 ## 📂 Project Structure
-
+```
 drag-drop-builder/
 ├── src/
 │ ├── components/
@@ -66,7 +66,7 @@ drag-drop-builder/
 ├── postcss.config.js
 ├── vite.config.js
 └── README.md
-
+```
 
 
 
@@ -75,7 +75,7 @@ drag-drop-builder/
 1. **Clone the repository**
    
    ```bash
-   git clone [<repository-url>](https://github.com/eshakar/Drag-drop.git)
+   git clone https://github.com/eshakar/Drag-drop.git
    cd drag-drop-builder
     ```
 
@@ -97,7 +97,7 @@ drag-drop-builder/
    http://localhost:5173
    ```
 
----
+
 
 ## 🎮 Usage
 
@@ -145,7 +145,7 @@ drag-drop-builder/
 2. **Deploy to Vercel**
 
    ```bash
-   [vercel](https://drag-drop-dun-zeta.vercel.app/)
+   https://drag-drop-dun-zeta.vercel.app/
    ```
 
 
