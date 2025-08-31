@@ -1,6 +1,3 @@
-
-
-```
 # Drag-and-Drop Website Builder Prototype
 
 A prototype implementation of **Websites.co.in's drag-and-drop website builder**, transforming the existing **form-based builder** into an intuitive **drag-and-drop interface**.  
@@ -46,7 +43,7 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 
 ## 📂 Project Structure
 
-```
+
 
 drag-drop-builder/
 ├── src/
