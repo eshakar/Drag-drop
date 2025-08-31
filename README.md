@@ -44,7 +44,6 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 ## 📂 Project Structure
 
 
-
 drag-drop-builder/
 ├── src/
 │   ├── components/
@@ -72,31 +71,31 @@ drag-drop-builder/
 ├── vite.config.js
 └── README.md
 
-````
+
 
 ---
 
 ## ⚙️ Setup Instructions
 
 1. **Clone the repository**
-   ```bash
+   
    git clone <repository-url>
    cd drag-drop-builder
-````
 
-2. **Install dependencies**
+
+3. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Run the development server**
+4. **Run the development server**
 
    ```bash
    npm run dev
    ```
 
-4. Open in your browser:
+5. Open in your browser:
 
    ```
    http://localhost:5173
