@@ -40,27 +40,26 @@ Users can drag elements (Text, Image, Button) into a predefined **template struc
 
 ## 📂 Project Structure
 
-
 drag-drop-builder/
 ├── src/
-│   ├── components/
-│   │   ├── ui/
-│   │   │   ├── button.jsx
-│   │   │   ├── card.jsx
-│   │   │   ├── input.jsx
-│   │   │   └── label.jsx
-│   │   ├── Canvas.jsx
-│   │   ├── Element.jsx
-│   │   ├── PropertiesPanel.jsx
-│   │   └── Sidebar.jsx
-│   ├── store/
-│   │   ├── canvasSlice.js
-│   │   └── store.js
-│   ├── lib/
-│   │   └── utils.js
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── index.css
+│ ├── components/
+│ │ ├── ui/
+│ │ │ ├── button.jsx
+│ │ │ ├── card.jsx
+│ │ │ ├── input.jsx
+│ │ │ └── label.jsx
+│ │ ├── Canvas.jsx
+│ │ ├── Element.jsx
+│ │ ├── PropertiesPanel.jsx
+│ │ └── Sidebar.jsx
+│ ├── store/
+│ │ ├── canvasSlice.js
+│ │ └── store.js
+│ ├── lib/
+│ │ └── utils.js
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── index.css
 ├── jsconfig.json
 ├── package.json
 ├── tailwind.config.js
