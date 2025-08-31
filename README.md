@@ -74,7 +74,7 @@ drag-drop-builder/
 
 1. **Clone the repository**
    
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/eshakar/Drag-drop.git)
    cd drag-drop-builder
 
 
