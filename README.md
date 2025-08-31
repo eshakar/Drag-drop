@@ -1,73 +1,171 @@
-#Drag-and-Drop Website Builder Prototype
-Objective
-Transform Websites.co.in's form-based website builder into an intuitive drag-and-drop interface, enabling users to drag elements (text, images, buttons) into a predefined template structure (header, body, footer) and configure element properties via forms, enhancing design control while preserving the existing form-based approach.
-Architecture
-
-Sidebar: A toolbox containing draggable elements (text, image, button) implemented with react-dnd for smooth drag-and-drop interactions. Styled with shadcn/ui Card and Button components for a polished look.
-Canvas: Renders a predefined template with three sections (header, body, footer), each acting as a separate drop zone using react-dnd. Elements are stored in Redux, with visual feedback (e.g., green background on drag-over) for better UX. Includes undo/redo buttons using shadcn/ui Button.
-PropertiesPanel: A form-based editor for customizing element properties (e.g., text content, font size, color, image URL) using shadcn/ui components (Input, Label, Select, Card). Updates are managed via Redux for real-time rendering.
-State Management: Redux Toolkit (canvasSlice.js) manages elements, their properties, and state history for undo/redo functionality. Elements are associated with section IDs to support the template structure.
-Styling: Tailwind CSS provides responsive, utility-first styling. shadcn/ui components integrate with Tailwind for a modern, accessible UI.
-
-Tools Used
-
-Vite: Fast build tool for efficient development and production builds.
-React: Component-based framework for building the UI (preferred by the problem statement).
-Redux Toolkit: Centralized state management for elements, properties, and history (undo/redo).
-react-dnd + HTML5 Backend: Enables smooth drag-and-drop functionality with section-based drop zones.
-Tailwind CSS: Utility-first CSS framework for responsive and maintainable styling.
-shadcn/ui: Reusable, accessible UI components (Button, Input, Card, Label, Select) styled with Tailwind.
-tailwind-merge: Merges Tailwind classes to avoid conflicts in the cn utility.
-
-Rationale
-
-react-dnd: Chosen for its flexibility in implementing drag-and-drop with multiple drop zones (header, body, footer), supporting precise element placement and future grid-based positioning.
-Redux Toolkit: Provides scalable state management for elements, properties, and history, enabling features like undo/redo and template support.
-Tailwind CSS: Ensures rapid development of responsive layouts (e.g., flex-col md:flex-row for mobile support) with minimal custom CSS.
-shadcn/ui: Delivers polished, accessible UI components that integrate seamlessly with Tailwind, enhancing user experience and form-based customization.
-Form-Based Approach: Preserves Websites.co.in's existing form-driven workflow, augmented with drag-and-drop for greater design flexibility.
-
-Setup Instructions
-
-Clone the repository:git clone <repository-url>
-cd drag-drop-builder
 
 
-Install dependencies:npm install
+```
+# Drag-and-Drop Website Builder Prototype
 
+A prototype implementation of **Websites.co.in's drag-and-drop website builder**, transforming the existing **form-based builder** into an intuitive **drag-and-drop interface**.  
+Users can drag elements (Text, Image, Button) into a predefined **template structure** (Header, Body, Footer) and customize their properties via a **form-based properties panel**, combining flexibility with the original form-driven workflow.
 
-Run the development server:npm run dev
+---
 
+## 🚀 Features
 
-Open http://localhost:5173 in your browser to view the prototype.
+- **Sidebar Toolbox**  
+  - Draggable elements (Text, Image, Button) using `react-dnd`.  
+  - Built with `shadcn/ui` components for a polished look.
 
-Usage
+- **Canvas (Template Layout)**  
+  - Predefined **three-section template** (Header, Body, Footer).  
+  - Each section acts as a **drop zone** with visual feedback (green highlight on drag-over).  
+  - Undo/Redo buttons powered by Redux state history.
 
-Drag-and-Drop: Drag elements (text, image, button) from the sidebar to a template section (header, body, or footer) on the canvas.
-Customize: Click an element to open the properties panel. Edit properties like text content, font size (via dropdown), colors (via color picker), or image URL/width using forms.
-Undo/Redo: Use the undo/redo buttons on the canvas to revert or restore changes.
-Responsive Design: The layout stacks vertically on mobile devices (below 768px) and displays horizontally on desktop, thanks to Tailwind CSS.
+- **Properties Panel**  
+  - Edit element properties (Text content, Font size, Colors, Image URL, Width, etc.).  
+  - Updates managed by **Redux** for real-time rendering.
 
-Future Enhancements
+- **State Management**  
+  - `Redux Toolkit` handles elements, properties, section IDs, and undo/redo history.  
 
-Grid System: Integrate react-grid-layout for precise element positioning within sections, enabling more complex layouts.
-Dynamic Templates: Allow users to select or create custom template structures (e.g., add/remove sections).
-Additional Properties: Support more styling options (e.g., padding, margin, alignment) in the properties panel.
-Export Functionality: Save the canvas state as JSON for website generation or export to Websites.co.in’s backend.
-Form Validation: Add validation for inputs (e.g., valid image URLs) to prevent errors.
-New Elements: Extend support for additional element types (e.g., video, forms) via elementTypes and Element.jsx.
+- **Styling & UI**  
+  - **Tailwind CSS** for utility-first responsive design.  
+  - **shadcn/ui** components (`Button`, `Card`, `Input`, `Label`, `Select`) for modern accessibility.  
 
-Known Limitations
+---
 
-Template is fixed to three sections (header, body, footer); dynamic templates are not yet supported.
-Limited element properties (e.g., font size, color, width); could include more styling options.
-Undo/redo history is basic and does not persist across sessions.
-Mobile usability is functional but could be enhanced with collapsible panels or touch-friendly controls.
+## 🛠️ Tech Stack
 
-Deployment
-To deploy the prototype (e.g., for submission):
+- **Vite** – Fast build tool  
+- **React** – Component-based UI  
+- **Redux Toolkit** – State management (with undo/redo support)  
+- **react-dnd** – Drag-and-drop functionality  
+- **Tailwind CSS** – Styling framework  
+- **shadcn/ui** – Accessible UI components  
+- **tailwind-merge** – Utility to prevent conflicting Tailwind classes  
 
-Build the project:npm run build
+---
 
+## 📂 Project Structure
 
-Deploy to Vercel:[vercel](https://drag-drop-dun-zeta.vercel.app/)
+```
+
+drag-drop-builder/
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── button.jsx
+│   │   │   ├── card.jsx
+│   │   │   ├── input.jsx
+│   │   │   └── label.jsx
+│   │   ├── Canvas.jsx
+│   │   ├── Element.jsx
+│   │   ├── PropertiesPanel.jsx
+│   │   └── Sidebar.jsx
+│   ├── store/
+│   │   ├── canvasSlice.js
+│   │   └── store.js
+│   ├── lib/
+│   │   └── utils.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+├── jsconfig.json
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── README.md
+
+````
+
+---
+
+## ⚙️ Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd drag-drop-builder
+````
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open in your browser:
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 🎮 Usage
+
+* **Drag & Drop**
+  Drag elements (Text, Image, Button) from the sidebar and drop them into the Header, Body, or Footer.
+
+* **Customize Elements**
+  Click an element → Open **Properties Panel** → Update properties like text content, font size, color, or image URL.
+
+* **Undo/Redo**
+  Use the buttons in the Canvas toolbar to revert or restore changes.
+
+* **Responsive Design**
+
+  * **Mobile**: Layout stacks vertically.
+  * **Desktop**: Layout is horizontal for efficient editing.
+
+---
+
+## 🌱 Future Enhancements
+
+* Grid system (`react-grid-layout`) for **precise element positioning**
+* Support for **dynamic templates** (add/remove sections)
+* Extended **properties** (padding, margin, alignment, animations)
+* Export canvas state as **JSON** for backend integration
+* Form validation (e.g., valid image URLs)
+* Support for **new element types** (Video, Forms, Galleries, etc.)
+
+---
+
+## ⚠️ Known Limitations
+
+* Template fixed to **3 sections (Header, Body, Footer)**
+* Limited property customization (basic text, colors, image width)
+* Undo/redo **does not persist across sessions**
+* Mobile usability could be enhanced with **collapsible panels** and **touch-friendly drag**
+
+---
+
+## 🚢 Deployment
+
+1. **Build the project**
+
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to Vercel**
+
+   ```bash
+   [vercel](https://drag-drop-dun-zeta.vercel.app/)
+   ```
+
+---
+
+## 📝 Notes
+
+* Built with **scalability** in mind using modular components and Redux for centralized state.
+* Optimized to serve as a **proof-of-concept** for Websites.co.in's drag-and-drop builder.
+* All earlier issues (imports, Vite cache, etc.) resolved → stable application.
+
+---
+
